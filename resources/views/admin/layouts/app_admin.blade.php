@@ -18,6 +18,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- Font Awesome -->
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 <body>
     <div id="app">
@@ -34,10 +37,10 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="dropdown">
-                            <a href="#" class="dropdown-item" data-toggle="dropdown" role="button" aria expanded="false">Блог</a>
+                            <a href="#" id="navbarDropdown" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria expanded="false">Блог</a>
                             <ul class="dropdown-menu" role="menu">
                                 <li>
-                                    <a href="#" class="dropdown-item">Категории</a>
+                                    <a href="{{route('admin.category.index')}}" class="dropdown-item">Категории</a>
                                     <a href="#" class="dropdown-item">Материалы</a>
                             </ul>
                         </li>
