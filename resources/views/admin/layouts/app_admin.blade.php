@@ -24,7 +24,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -37,11 +37,14 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="dropdown">
+                            <a class="nav-link" href="{{route('admin.index')}}" role="button" aria-expanded="false">Панель</a>
+                        </li>
+                        <li class="dropdown">
                             <a href="#" id="navbarDropdown" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria expanded="false">Блог</a>
                             <ul class="dropdown-menu" role="menu">
                                 <li>
                                     <a href="{{route('admin.category.index')}}" class="dropdown-item">Категории</a>
-                                    <a href="#" class="dropdown-item">Материалы</a>
+                                    <a href="{{route('admin.article.index')}}" class="dropdown-item">Материалы</a>
                             </ul>
                         </li>
                     </ul>
@@ -86,5 +89,6 @@
             @yield('content')
         </main>
     </div>
+    <script src="{{asset('/vendor/unisharp/laravel-ckeditor/ckeditor.js')}}"></script>
 </body>
 </html>
