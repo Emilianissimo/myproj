@@ -177,6 +177,7 @@ return [
 
         //Custom providers (Emil)
         Unisharp\Ckeditor\ServiceProvider::class,
+        App\Providers\BlogServiceProvider::class,
 
     ],
 

@@ -9,6 +9,15 @@
 	@endif
 </select>
 
+
+<label>Изображение</label>
+<form action="" method="post" enctype="multipart/form-data">
+	{{ csrf_field() }}
+	<div class="form-group">
+		<input type="file" name="image" value="{{$article->image ?? ''}}">
+	</div>
+	<button class="btn btn-primary" type="submit">Загрузить</button>
+</form>
 <label for="">Заголовок</label>
 <input type="text" class="form-control" name="title" placeholder="Заголовок новости" value="{{$article->title ?? ''}}" required>
 

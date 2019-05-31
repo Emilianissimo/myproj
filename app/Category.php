@@ -13,7 +13,7 @@ class Category extends Model
 
 	//Mutators или преобразователи для автогенерации title в slug
 	public function setSlugAttribute($value){
-		$this->attributes['slug'] = Str::slug(mb_substr($this->title, 0, 40) . "-" . \Carbon\Carbon::now()->format('dmyHi'), '-');
+		$this->attributes['slug'] = Str::slug(mb_substr($this->title, 0, 40) /*. "-" . \Carbon\Carbon::now()->format('dmyHi'), '-'*/);
 	}
 
     //Get children category
